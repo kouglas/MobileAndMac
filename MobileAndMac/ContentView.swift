@@ -14,8 +14,16 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+          
+//            preprocessing macros 
+            #if os(macOS)
+            Text("This is a macOS app!")
+            #else
+            Text("This is not macOS")
+            #endif
         }
         .padding()
+        
     }
 }
 
